@@ -1,16 +1,16 @@
 extends Node2D
 
-@onready var enhanced_sprite = $EnhancedSprite
+@onready var enhancedSprite = $EnhancedSprite
 @onready var player = $Player
 
 func _ready():
-    enhanced_sprite.sprite_clicked.connect(_on_enhanced_sprite_clicked)
-    enhanced_sprite.orbit_completed.connect(_on_orbit_completed)
+    enhancedSprite.spriteClicked.connect(_on_enhancedSprite_clicked)
+    enhancedSprite.orbitCompleted.connect(_on_orbitCompleted)
     
-    player.player_action.connect(enhanced_sprite.on_player_action)
+    player.playerAction.connect(enhancedSprite.on_playerAction)
 
-func _on_enhanced_sprite_clicked():
+func _on_enhancedSprite_clicked():
     print("EnhancedSprite clicked! Adding score.")
 
-func _on_orbit_completed():
+func _on_orbitCompleted():
     print("Orbit completed! Animation finished.")
