@@ -1,0 +1,17 @@
+[application]
+
+config/name="Enhanced Sprite Demo"
+config/description="Demonstration of GDExtension with EnhancedSprite"
+run/main_scene="res://demo/Main.tscn"
+config/icon="res://icon.png"
+
+[input]
+
+[display]
+
+window/size/viewport_width=1152
+window/size/viewport_height=648
+
+[gdextension]
+
+["res://demo/EnhancedSprite.gdextension"]
