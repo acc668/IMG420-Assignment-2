@@ -13,17 +13,17 @@ namespace godot
   
     private:
         // declare variable(s)
-        float orbit_radius;
-        float orbit_speed;
-        Node2D* orbit_target;
+        float orbitRadius;
+        float orbitSpeed;
+        Node2D* orbitTarget;
         bool orbiting;
-        float orbit_angle;
-        float pulse_speed;
-        float pulse_min_scale;
-        float pulse_max_scale;
+        float orbitAngle;
+        float pulseSpeed;
+        float pulseMinScale;
+        float pulseMaxScale;
         bool pulsing;
-        float pulse_timer;
-        bool is_animating;
+        float pulseTimer;
+        bool isAnimating;
     
     protected:
         static void _bind_methods();
@@ -34,33 +34,33 @@ namespace godot
 
         // declare necessary functions
         void _process(double delta) override;
-        void set_orbit_radius(float p_radius);
-        float get_orbit_radius() const;
-        void set_orbit_speed(float p_speed);
-        float get_orbit_speed() const;
-        void set_orbit_target(Node2D* p_target);
-        Node2D* get_orbit_target() const;
-        void start_orbiting();
-        void stop_orbiting();
-        void set_pulse_speed(float p_speed);
-        float get_pulse_speed() const;
-        void set_pulse_min_scale(float p_min_scale);
-        float get_pulse_min_scale() const;
-        void set_pulse_max_scale(float p_max_scale);
-        float get_pulse_max_scale() const;
-        void start_pulsing();
-        void stop_pulsing();
-        void play_animation();
-        void pause_animation();
-        void stop_animation();
-        void sprite_clicked();
-        void on_player_action(const String& action_name);
-        void animation_completed();
-        void orbit_completed();
+        void setOrbitRadius(float p_radius);
+        float getOrbitRadius() const;
+        void setOrbitSpeed(float p_speed);
+        float getOrbitSpeed() const;
+        void setOrbitTarget(Node2D* p_target);
+        Node2D* getOrbitTarget() const;
+        void startOrbiting();
+        void stopOrbiting();
+        void setPulseSpeed(float p_speed);
+        float getPulseSpeed() const;
+        void setPulseMinScale(float p_minScale);
+        float getPulseMinScale() const;
+        void setPulseMaxScale(float p_maxScale);
+        float getPulseMaxScale() const;
+        void startPulsing();
+        void stopPulsing();
+        void playAnimation();
+        void pauseAnimation();
+        void stopAnimation();
+        void spriteClicked();
+        void onPlayerAction(const String& actionName);
+        void animationCompleted();
+        void orbitCompleted();
     
     private:
-        void update_orbit_position(double delta);
-        void update_pulse_animation(double delta);
+        void updateOrbitPosition(double delta);
+        void updatePulseAnimation(double delta);
   };
 
 }
