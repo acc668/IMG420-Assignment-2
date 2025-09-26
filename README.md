@@ -8,23 +8,23 @@ This project extends Godot's Sprite2D class via GDExtension to create an Enhance
 
 **Feature 1: Orbital Rotation**
 - Sprite orbits around a target node with configurable radius and speed
-- Editor-accessible parameters: `orbit_radius`, `orbit_speed`, `orbit_target`
+- Editor-accessible parameters: `orbitRadius`, `orbitSpeed`, `orbitTarget`
 
 **Feature 2: Pulsating Scale** 
 - Sprite scales up and down smoothly with sine wave interpolation
-- Editor-accessible parameters: `pulse_speed`, `pulse_min_scale`, `pulse_max_scale`
+- Editor-accessible parameters: `pulseSpeed`, `pulseMinScale`, `pulseMaxScale`
 
 ### Signaling System
 
-**Signal Emitted by EnhancedSprite**: `sprite_clicked()`
+**Signal Emitted by EnhancedSprite**: `spriteClicked()`
 - Triggers methods in existing nodes when the sprite is interacted with
 
-**Method in EnhancedSprite**: `on_player_action(action_name)`
+**Method in EnhancedSprite**: `onPlayerAction(actionName)`
 - Triggered by signals emitted from existing nodes (like Player)
 - Controls animation behaviors based on player input
 
 ### Extra Credit: Animation Control
-- `play_animation()`, `pause_animation()`, `stop_animation()` methods
+- `playAnimation()`, `pauseAnimation()`, `stopAnimation()` methods
 - Custom animation system without using built-in Godot animation tools
 
 ## Building Instructions
