@@ -1,0 +1,11 @@
+[configuration]
+entry_symbol = "enhanced_sprite_library_init"
+compatibility_minimum = "4.2"
+
+[libraries]
+linux.debug.x86_64 = "res://bin/enhanced_sprite.linux.so"
+linux.release.x86_64 = "res://bin/enhanced_sprite.linux.so"
+windows.debug.x86_64 = "res://bin/enhanced_sprite.win.dll"
+windows.release.x86_64 = "res://bin/enhanced_sprite.win.dll"
+macos.debug = "res://bin/enhanced_sprite.osx.dylib"
+macos.release = "res://bin/enhanced_sprite.osx.dylib"
