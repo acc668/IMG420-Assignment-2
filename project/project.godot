@@ -1,9 +1,0 @@
-[application]
-config/name="Assignment #2"
-config/description="GDExtension demonstration for Assignment 2"
-run/main_scene="res://main.tscn"
-config/icon="res://icon.svg"
-
-[display]
-window/size/viewport_width=1152
-window/size/viewport_height=648
