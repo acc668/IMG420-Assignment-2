@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://cibf17qgwu8nv"]
+
+[ext_resource type="Texture2D" uid="uid://dtjg7i2p77ldu" path="res://assets/Free-Slime-Sprite-Sheets-Pixel-Art6.jpg" id="1_yi3f7"]
+[ext_resource type="Script" uid="uid://4xb837hxpk2q" path="res://label.gd" id="2_17atg"]
+[ext_resource type="Script" uid="uid://clvexwb45nvbt" path="res://button.gd" id="3_oheb0"]
+
+[node name="Main" type="Node2D"]
+
+[node name="MyEnhancedSprite" type="EnhancedSprite2D" parent="."]
+rotation_speed = 2.0
+pulse_intensity = 0.3
+position = Vector2(557.99994, 346.99997)
+rotation = 2623.3115
+scale = Vector2(1.2997212, 1.2997212)
+texture = ExtResource("1_yi3f7")
+region_enabled = true
+region_rect = Rect2(282.8182, 140.36366, 95.45456, 65.45456)
+
+[node name="TriggerButton" type="Button" parent="."]
+offset_left = 140.0
+offset_top = 545.0
+offset_right = 269.0
+offset_bottom = 576.0
+text = "Toggle Rotation"
+
+[node name="StatusLabel" type="Label" parent="."]
+offset_left = 122.0
+offset_top = 590.0
+offset_right = 288.0
+offset_bottom = 613.0
+text = "Waiting for rotation..."
+script = ExtResource("2_17atg")
+
+[node name="TogglePulseButton" type="Button" parent="."]
+offset_left = 316.0
+offset_top = 544.0
+offset_right = 420.0
+offset_bottom = 575.0
+text = "Toggle Pulse"
+script = ExtResource("3_oheb0")
+
+[connection signal="rotation_completed" from="MyEnhancedSprite" to="StatusLabel" method="_on_my_enhanced_sprite_rotation_completed"]
+[connection signal="pressed" from="TriggerButton" to="MyEnhancedSprite" method="on_external_trigger"]
+[connection signal="pressed" from="TogglePulseButton" to="TogglePulseButton" method="_on_pressed"]
